@@ -1,0 +1,21 @@
+<!-- profiles/templates/result_template.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection Result</title>
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Add custom CSS here if needed */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Result: {{ result }}</h1>
+        <a href="{% url 'real_time_detection' %}" class="btn btn-primary">Back to Detection</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- profiles/templates/detection_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Detection</title>
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Add custom CSS here if needed */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Real-Time Detection</h1>
+        <!-- Django form for real-time detection -->
+        <form method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <!-- Bootstrap-styled form for real-time detection -->
+        <form method="post" action="{% url 'real_time_detection' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="instagram_username">Instagram Username:</label>
+                <input type="text" class="form-control" id="instagram_username" name="instagram_username" placeholder="Enter Instagram Username">
+            </div>
+            <button type="submit" class="btn btn-primary">Detect</button>
+        </form>
+    </div>
+</body>
+</html>
